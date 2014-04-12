@@ -13,7 +13,7 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'DB_HOST', '%%DB_HOST%%' ); // Probably 'localhost'
 }
 
-// define('WP_MEMORY_LIMIT', '96M');
+define('WP_MEMORY_LIMIT', '96M');
 
 // ========================
 // Custom Content Directory
@@ -45,6 +45,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 // Change this if you have multiple installs in the same database
 // ==============================================================
 $table_prefix  = 'wpd_';
+define('WP_ALLOW_REPAIR', true);
 
 // ================================
 // Language
