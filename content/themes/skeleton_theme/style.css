@@ -19,6 +19,8 @@ body, input, textarea
 }
 h1, h2, h3, h4, h5, h6
 { 
+	border: 2px solid #fff;
+	border-radius: 25px;
 	font-weight: normal;
 	clear: both;
 }
@@ -110,11 +112,6 @@ div#content
 
 /* Entry and Page Titles */
 
-h1
-{
-	border 2px solid;
-	border-radius: 25px;
-}
 h1.entry-title
 {
 	
