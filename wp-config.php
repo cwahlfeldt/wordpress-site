@@ -45,7 +45,6 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 // Change this if you have multiple installs in the same database
 // ==============================================================
 $table_prefix  = 'wpd_';
-define('WP_ALLOW_REPAIR', true);
 
 // ================================
 // Language
