@@ -9,7 +9,6 @@ html
 body
 {
 	background: #000;
-	text-align: center;
 }
 body, input, textarea
 {
@@ -65,7 +64,8 @@ a:visited
 /* Styles that affect the entire layout of the page */
 div#container
 {
-	margin: 4px 4px 4px 4px;
+	margin: 5% 30% 5% 30%;
+	text-align: left;
 }
 div#content
 {
