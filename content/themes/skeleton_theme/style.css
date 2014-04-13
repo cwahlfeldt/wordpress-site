@@ -58,8 +58,6 @@ a:visited
 	color: #8b46d1;
 }
 
-
-
 /*** PAGE LAYOUT ***/
 
 /* Styles that affect the entire layout of the page */
@@ -72,7 +70,6 @@ div#content
 {
 	
 }
-
 
 /*** HEADER : MENU ***/
 
@@ -237,7 +234,6 @@ div#respond h3
 	/* H3 header for the comment response form */
 }
 
-
 /*** CONTENT : SIDEBAR ***/
 div#primary
 {
@@ -264,8 +260,4 @@ div#footer
 	clear: both;
 }
 
-
 /*** YOUR CSS ***/
-
-
-
