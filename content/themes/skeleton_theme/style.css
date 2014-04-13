@@ -261,7 +261,7 @@ div#secondary
 /*** FOOTER ***/
 div#footer
 {
-	float: left;
+	text-align: center;
 	clear: both;
 	background-color: #3DF4BD;
 }
