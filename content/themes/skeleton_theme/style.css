@@ -109,10 +109,15 @@ div#content
 /*** CONTENT : POSTS AND PAGES ***/
 
 /* Entry and Page Titles */
-h1.entry-title
+
+h1
 {
 	border 2px solid;
 	border-radius: 25px;
+}
+h1.entry-title
+{
+	
 }
 h2.entry-title
 {
