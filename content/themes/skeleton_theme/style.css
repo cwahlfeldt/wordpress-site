@@ -68,7 +68,7 @@ div#container
 }
 div#content
 {
-	
+	background-color: #F43D74;
 }
 
 /*** HEADER : MENU ***/
@@ -258,6 +258,7 @@ div#footer
 {
 	float: left;
 	clear: both;
+	background-color: #3DF4BD;
 }
 
 /*** YOUR CSS ***/
