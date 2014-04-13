@@ -104,18 +104,15 @@ div#content
 	color: #5d8a05;
 }
 
-
-
 /*** HEADER : OTHER ***/
-
-
 
 /*** CONTENT : POSTS AND PAGES ***/
 
 /* Entry and Page Titles */
 h1.entry-title
 {
-	
+	border 2px solid;
+	border-radius: 25px;
 }
 h2.entry-title
 {
