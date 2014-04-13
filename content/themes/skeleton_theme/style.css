@@ -9,7 +9,6 @@ html
 body
 {
 	background: #000;
-	margin: 0;
 }
 body, input, textarea
 {
@@ -19,6 +18,9 @@ body, input, textarea
 }
 h1, h2, h3, h4, h5, h6
 { 
+	padding: 5px;
+	border: 2px solid #fff;
+	border-radius: 10px;
 	font-weight: normal;
 	clear: both;
 }
@@ -29,18 +31,23 @@ hr
 	height: 1px;
 	margin-bottom: 1.5em;
 }
-pre
+pre 
 {
-	font: 11px Monaco, monospace;
-	line-height: 1.5;
-	margin-bottom: 1.5em;
+	border: solid 1px blue;
+	font-size: 1.3 em; 
+ 	color: blue; 
+	margin: 10px; 
+	padding:10px; 
+	background: #FFFFB3
 }
-code
+code 
 {
-	font: 11px Monaco, monospace;
+	font-size:1.2em; 
+	color: #008099
 }
 p
 {
+	padding: 10px;
 	margin: 4px 0 12px 0;
 }
 a
@@ -56,20 +63,18 @@ a:visited
 	color: #8b46d1;
 }
 
-
-
 /*** PAGE LAYOUT ***/
 
 /* Styles that affect the entire layout of the page */
 div#container
 {
-	margin: 4px 4px 4px 4px;
+	margin: 5% 30% 5% 30%;
+	text-align: left;
 }
 div#content
 {
-	
+	background-color: #F43D74;
 }
-
 
 /*** HEADER : MENU ***/
 
@@ -104,15 +109,12 @@ div#content
 	color: #5d8a05;
 }
 
-
-
 /*** HEADER : OTHER ***/
-
-
 
 /*** CONTENT : POSTS AND PAGES ***/
 
 /* Entry and Page Titles */
+
 h1.entry-title
 {
 	
@@ -237,7 +239,6 @@ div#respond h3
 	/* H3 header for the comment response form */
 }
 
-
 /*** CONTENT : SIDEBAR ***/
 div#primary
 {
@@ -260,12 +261,9 @@ div#secondary
 /*** FOOTER ***/
 div#footer
 {
-	float: left;
+	text-align: center;
 	clear: both;
+	background-color: #3DF4BD;
 }
 
-
 /*** YOUR CSS ***/
-
-
-
