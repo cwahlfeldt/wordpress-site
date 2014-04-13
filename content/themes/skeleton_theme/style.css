@@ -8,11 +8,10 @@ html
 }
 body
 {
-	background: #000;
+	background: #111;
 }
 body, input, textarea
-{
-	color: #fff;    
+{   
 	font-family: Tahoma, Geneva, sans-serif;
 	line-height: 1.5;
 }
