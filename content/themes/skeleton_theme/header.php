@@ -26,14 +26,23 @@
 <div id="wrapper" class="hfeed">
     <div id="header">
         <div id="masthead">
+     
+          <!-- **This is my headee php stuff** -->
+          <div id="headerimg">
+  			 		<h1>
+   				 		<a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
+  			 		</h1>
+    					<div class="description"><?php bloginfo('description'); ?>
+            	</div>
+  				</div>
  
             <div id="access">
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
 				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-            </div><!-- #access -->
+            </div> <!--#access-->
  			
-        </div><!-- #masthead -->
-    </div><!-- #header -->
- 
+        </div> <!--#masthead-->
+    </div>
+
     <div id="main">
