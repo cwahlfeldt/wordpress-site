@@ -21,6 +21,7 @@
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
 </head>
 <body>
 <div id="wrapper" class="hfeed">
@@ -33,6 +34,28 @@
    				 		<a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
   			 		</h1>
   				</div>
+
+          <div id="search">
+          <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+            <img src="shared/content/uploads/magnifyingGlass.png" />
+              <input type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+              <!-- Press enter to search -->
+                  <script>
+                    $(function() {
+                        $("form input").keypress(function (e) {
+                            if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                                $('button[type=submit] .default').click();
+                                return false;
+                            } else {
+                                return true;
+                            }
+                        });
+                    });
+                  </script>
+              <!-- ////////////////////////////////////////////////////////// -->
+
+          </form>
+          </div>
  
             <div id="access">
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->

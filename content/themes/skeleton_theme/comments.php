@@ -73,7 +73,7 @@ foreach ( $comments as $comment )
 <?php /* If comments are open, build the respond form */ ?>
 <?php if ( 'open' == $post->comment_status ) : ?>
                 <div id="respond">
-                    <h3><?php comment_form_title( __('Post a Comment', 'hbd-theme'), __('Post a Reply to %s', 'hbd-theme') ); ?></h3>
+                    <!-- <h3><?php comment_form_title( __('Post a Comment', 'hbd-theme'), __('Post a Reply to %s', 'hbd-theme') ); ?></h3> -->
  
                     <div id="cancel-comment-reply"><?php cancel_comment_reply_link() ?></div>
  
@@ -94,15 +94,15 @@ foreach ( $comments as $comment )
  
 <?php else : ?>
  
-                            <p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'hbd-theme') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'hbd-theme') ?></p>
+                            <!-- <p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'hbd-theme') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'hbd-theme') ?></p> -->
  
               <div id="form-section-author" class="form-section">
-                                <div class="form-label"><label for="author"><?php _e('Name', 'hbd-theme') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'hbd-theme') ?></div>
+                                <div class="form-label"><label for="author"><?php _e('Name', 'hbd-theme') ?></label><div>
                                 <div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
               </div><!-- #form-section-author .form-section -->
  
               <div id="form-section-email" class="form-section">
-                                <div class="form-label"><label for="email"><?php _e('Email', 'hbd-theme') ?></label> <?php if ($req) _e('<span class="required">*</span>', 'hbd-theme') ?></div>
+                                <div class="form-label"><label for="email"><?php _e('Email', 'hbd-theme') ?></label></div>
                                 <div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
               </div><!-- #form-section-email .form-section -->
  
@@ -118,9 +118,9 @@ foreach ( $comments as $comment )
                                 <div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
               </div><!-- #form-section-comment .form-section -->
  
-              <div id="form-allowed-tags" class="form-section">
+              <!-- <div id="form-allowed-tags" class="form-section">
                   <p><span><?php _e('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'hbd-theme') ?></span> <code><?php echo allowed_tags(); ?></code></p>
-              </div>
+              </div> -->
  
 <?php do_action('comment_form', $post->ID); ?>
  

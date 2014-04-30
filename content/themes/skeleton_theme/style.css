@@ -8,7 +8,7 @@ html
 }
 body
 {
-	background: #333;
+	background: #212020;
 }
 body, input, textarea
 {   
@@ -19,6 +19,12 @@ h1, h2, h3, h4, h5, h6
 { 
 	font-weight: normal;
 	clear: both;
+	color: white;
+	opacity: .7;
+	-webkit-margin-before: 0.0em;
+	-webkit-margin-after: 0.0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 }
 hr
 {
@@ -43,8 +49,8 @@ code
 }
 p
 {
-	padding: 10px;
-	margin: 4px 0 12px 0;
+	color: white;
+	opacity: .5;
 }
 a
 {
@@ -62,16 +68,19 @@ a:visited
 /*** PAGE LAYOUT ***/
 
 /* Styles that affect the entire layout of the page */
+div#wrapper 
+{
+	margin-top: 2%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
 div#container
 {
-	background-color: #04B4AE;
+
 }
 div#content
 {
-  margin: 1.3% 30% 1.3% 30%;
-	background-color: #F43D74;
-  text-align: left;
-	padding: 
+
 }
 
 /*** HEADER : MENU ***/
@@ -79,25 +88,59 @@ div#content
 /* To see a menu in your header, you'll need to first add one in WordPress Admin */
 div#header
 {
-  background-color: #9A2EFE;
-	text-align: center;
-  padding: 20px 20px 2px 20px;
+	text-align: left;
+}
+div#headerimg 
+{
+
+}
+div#headerimg a
+{
+	text-decoration: none;
+	font-family: Fixedsys;
+	font-size: 48px;
+	color: white;
+	opacity: .35; 
+	letter-spacing: 6px;
+}
+div#search img 
+{
+	float: left;
+}
+div#header input {
+	padding-left: 5px;
+	float: left;
+	border: none;
+	font-size: 22px;
+	width: 528px;	
+	border-bottom: 2px solid #6a6a6a;
+	color:#ffffff;
+	background: transparent;
+}
+div#header input[type=text]
+{
+	opacity: .4;
+}
+div#header input:focus
+{
+	border-bottom: 2px solid #ef5b39;
+	outline: none;
 }
 .menu ul
 {
-  list-style: none;
-  margin: 0;
+  	list-style: none;
+  	margin: 0;
 }
 .menu ul ul
 {
-  text-align: center;
-  display: none;
+    text-align: center;
+	display: none;
 }
 .menu li
 {
-  text-align: center;
-  display: inline;
-  float: left;
+  	text-align: center;
+ 	display: inline;
+ 	float: left;
 	padding: 0 8px 0 4px;
 }
 .menu-item
@@ -138,6 +181,22 @@ h1.page-title
 	
 }
 
+.entry-meta 
+{
+	font-weight: normal;
+	clear: both;
+	color: white;
+	opacity: .5;
+}
+
+.entry-utility 
+{
+	font-weight: normal;
+	clear: both;
+	color: white;
+	opacity: .5;
+}
+
 /* Media Alignment */
 .alignright
 {
@@ -150,6 +209,11 @@ h1.page-title
 	/* Style for left-aligned images in posts */
 	padding: 8px 8px 8px 0;
 	float: left;
+}
+
+div#access
+{
+	clear: both;
 }
 
 /* Entry Content */
@@ -173,7 +237,6 @@ h1.page-title
 {
 	
 }
-
 .entry-utility
 {
 	/* Style for the entry utility, which sits below a post and provides info like categories, tags, feeds, and an edit link (for authors) */

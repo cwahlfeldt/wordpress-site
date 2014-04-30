@@ -17,6 +17,15 @@
 	    }
 	} // end get_page_number
 
+	// Loads jQuery
+	function load_jQuery() {
+			if (!is_admin()) {
+				wp_enqueue_script('jquery');
+			}
+		}
+		add_action('init', 'load_jQuery');
+	// end of load
+
 	// Custom callback to list comments in the hbd-theme style
 	function custom_comments($comment, $args, $depth) {
 	  $GLOBALS['comment'] = $comment;
