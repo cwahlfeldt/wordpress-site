@@ -64,6 +64,7 @@ p
 }
 a
 {
+	position: relative;
 	color: #0a77e6;
 }
 a:hover
@@ -81,8 +82,8 @@ a:visited
 div#wrapper 
 {
 	margin-top: 2%;
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-bottom: 2%;
 }
 div#container
@@ -98,8 +99,13 @@ div#content
 
 /* To see a menu in your header, you'll need to first add one in WordPress Admin */
 div#header
+{	
+	display: flex;
+	/*float: left;*/
+}
+div#masthead
 {
-	text-align: left;
+	padding-bottom: 40px;
 }
 div#headerimg 
 {
@@ -118,23 +124,24 @@ div#search img
 {
 	float: left;
 }
-div#wrapper input 
+div#masthead input 
 {
-	position: absolute;
+	/*position: relative;*/
 	padding-left: 5px;
 	float: left;
+	/*clear: left;*/
 	border: none;
 	font-size: 22px;
-	width: 29%;	
+	width: 92%;	
 	border-bottom: 2px solid #6a6a6a;
 	color:#ffffff;
 	background: transparent;
 }
-div#wrapper input[type=text]
+div#header input[type=text]
 {
 	opacity: .4;
 }
-div#wrapper input:focus
+div#header input:focus
 {
 	border-bottom: 2px solid #ef5b39;
 	outline: none;
@@ -147,78 +154,123 @@ div#wrapper input:focus
 .menu ul ul
 {
     /*text-align: center;*/
-	display: none;
+	/*display: none;*/
 }
 .menu li
 {
   	/*text-align: center;*/
- 	display: inline;
+ 	/*display: inline;*/
  	/*float: left;*/
- 	padding: 10px 20px 4px 0px;
- 	float: left;
+ 	/*padding: 10px 20px 4px 0px;*/
+
+ 	/*float: left;*/
 }
+/*div#main  
+{
+	
+}*/
 
 /*******************main menu crap************/
-ul#menu-main a
+li
 {
-	
-	color: white !important;
-	text-decoration: none;
-	opacity: .5;
+	-webkit-transition-property: border-bottom;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+}
+li#menu-item-28
+{
+	position: relative;
+	float: left;
+	width: 18.73%;
+	border-bottom: 36px solid #c0492e;
+	border-right: 28px solid transparent;
+	z-index: 5;
+
+}
+li#menu-item-28:hover 
+{ 
+	border-bottom: 36px solid #9c3c25;
+	border-right: 28px solid transparent;
+}
+li#menu-item-25
+{
+	position: relative;
+	float: left;
+	width: 18.73%;
+	border-bottom: 36px solid #8929f4;
+	border-right: 28px solid transparent;
+	z-index: 4;
+}
+li#menu-item-25:hover 
+{ 
+	border-bottom: 36px solid #562488;
+	border-right: 28px solid transparent;
+}
+li#menu-item-24
+{
+	position: relative;
+	float: left;
+	width: 18.73%;
+	border-bottom: 36px solid #355ced;
+	border-right: 28px solid transparent;
+	z-index: 3;
+
+}
+li#menu-item-24:hover 
+{ 
+	border-bottom: 36px solid #2c3d84;
+	border-right: 28px solid transparent;
+}
+li#menu-item-23
+{
+	position: relative;
+	float: left;
+	width: 18.73%;
+	border-bottom: 36px solid #6c5f5f;
+	border-right: 28px solid transparent;
+	z-index: 1;
+
+}
+li#menu-item-23:hover  
+{ 
+	border-bottom: 36px solid #4f4646;
+	border-right: 28px solid transparent;
+}
+li#menu-item-22
+{
+	position: relative;
+	float: left;
+	width: 18.73%;
+	border-bottom: 36px solid #2aa04e;
+	border-right: 28px solid transparent;
+	z-index: 2;
+}
+li#menu-item-22:hover  
+{ 
+	border-bottom: 36px solid #2a663b;
+	border-right: 28px solid transparent;
+}
+ul#menu-main li
+{
+	display: block;
+   	height: 0;
+   	margin: 0 -20px 0 0;
+   	padding: 0;
+}
+
+ul#menu-main li a
+{
+	display: inline-block;
 	font-family: Fixedsys, Tahoma, Lucida console;
 	font-size: 23.5px;
-	padding: 10px 30px 5px 30px;
-	text-align: center;
-
+	color: #fff;
+	float: left;
+	margin: 0;
+	padding: 2px 75px 10px 25px;
+	text-decoration: none;
 }
-li#menu-item-26
-{
-	height: 80%;
-	padding: 10px 0 10px 0;
-	background: red;
-    -webkit-border-top-right-radius: 200px;
-	-moz-border-radius-topright: 200px;
-	border-top-right-radius: 200px;
-    /*position: relative;*/
 
-}
-li#menu-item-26 a
-{
-
-}
-li#menu-item-25 a
-{
-
-
-}
-li#menu-item-24 a
-{
-
-}
-li#menu-item-23 a
-{
-
-
-}
-li#menu-item-22 a
-{
-
-}
 /*****************************/
-.menu-item
-{
-	
-}
-.menu-item a
-{
-
-}
-.menu-item a:hover
-{
-	color: #5d8a05;
-}
-
-/*** HEADER : OTHER ***/
 
 /*** CONTENT : POSTS AND PAGES ***/
 
@@ -270,12 +322,6 @@ h1.page-title
 	padding: 8px 8px 8px 0;
 	float: left;
 }
-
-div#access
-{
-	clear: both;
-}
-
 /* Entry Content */
 .entry-content
 {

@@ -39,7 +39,7 @@
           <div id="search">
           <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
             <img src="shared/content/uploads/magnifyingGlass.png" />
-              <input type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+              <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
               <!-- Press enter to search -->
                   <script>
                     $(function() {
@@ -54,9 +54,11 @@
                     });
                   </script>
               <!-- ////////////////////////////////////////////////////////// -->
-
+            </div> 
           </form>
           </div>
+        </div>
+        <div id="main">
  
             <div id="access">
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
@@ -64,7 +66,7 @@
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
             </div> <!--#access-->
  			
-        </div> <!--#masthead-->
-    </div>
+        <!--#masthead-->
+    
 
-    <div id="main">
+    
