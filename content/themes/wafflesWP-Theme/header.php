@@ -38,7 +38,7 @@
 
           <div id="search">
           <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-            <img src="content/uploads/magnifyingGlass.png" />
+            <img src="shared/content/uploads/magnifyingGlass.png" />
               <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
               <!-- Press enter to search -->
                   <script>
