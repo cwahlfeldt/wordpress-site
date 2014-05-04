@@ -60,7 +60,12 @@ code
 p
 {
 	color: white;
-	opacity: .5;
+	opacity: .7;
+	display: block;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 }
 a
 {
@@ -81,15 +86,16 @@ a:visited
 /* Styles that affect the entire layout of the page */
 div#wrapper 
 {
-	width: 800px;
+	width: 820px;
 	margin: 0 auto;
 }
 div#container
 {
-
+	background: #9c3c25;
 }
 div#content
 {
+	padding: 20px 20px 20px 15px;
 
 }
 
@@ -98,17 +104,22 @@ div#content
 /* To see a menu in your header, you'll need to first add one in WordPress Admin */
 div#access li
 {
-	padding-bottom: 30px;
+	/*padding-bottom: 30px;*/
 }
 div#header
 {	
-	display: flex;
+	display: inline-block;
 	/*float: left;*/
+}
+div#header h1
+{
+	height: 70px;
 }
 div#masthead
 {
 	padding-bottom: 40px;
-	padding-top: 30px;
+	padding-top: 15px;
+	display: block;
 }
 div#headerimg 
 {
@@ -118,7 +129,7 @@ div#headerimg a
 {
 	text-decoration: none;
 	font-family: Fixedsys, Tahoma, Lucida console;
-	font-size: 48px;
+	font-size: 55px;
 	color: white;
 	opacity: .35; 
 	letter-spacing: 6px;
@@ -129,11 +140,12 @@ div#search img
 }
 div#masthead input 
 {
+	display: inline-block;
 	padding-left: 5px;
 	float: left;
 	border: none;
 	font-size: 22px;
-	width: 92%;	
+	width: 500px;	
 	border-bottom: 2px solid #6a6a6a;
 	color:#ffffff;
 	background: transparent;
@@ -171,12 +183,18 @@ div#header input:focus
 	
 }*/
 
-/*******************main menu crap************/
+
+/******************* main menu crap ************/
 li
 {
 	-webkit-transition-property: border-bottom;
   	-webkit-transition-duration: 0.3s;
   	-webkit-transition-timing-function: ease;
+}
+div#access
+{
+	padding-top: 40px;
+	width: 807px;
 }
 ul#menu-main li
 {
@@ -193,11 +211,11 @@ ul#menu-main li a
 	color: #fff;
 	float: left;
 	margin: 0;
-	padding: 2px 48px 10px 17px;
+	padding: 2px 80px 0px 17px;
 	text-decoration: none;
+	/*clear: both;*/
 }
-li.blog   /* ****** PC */ 
-/*li#menu-item-36 */   /* ****** MAC */
+li.blog
 {
 	position: relative;
 	float: left;
@@ -207,8 +225,7 @@ li.blog   /* ****** PC */
 	z-index: 5;
 
 }
-li.blog:hover    /* ****** PC */ 
-/*li#menu-item-36:hover */		 /* ****** MAC */
+li.blog:hover
 { 
 	border-bottom: 36px solid #9c3c25;
 	border-right: 28px solid transparent;
@@ -271,10 +288,29 @@ li.contact:hover
 	border-bottom: 36px solid #4f4646;
 	border-right: 28px solid transparent;
 }
+div#access p.botBar
+{
+	float: left;
+	clear: both;
+	border-bottom: 20px solid #c0492e;
+	opacity: 1;
+	/*background-color: #c0492e;*/
+	width: 820px;
+	padding: 0px;
+}
 
-/*****************************/
+/**********************************************/ 
+
 
 /*** CONTENT : POSTS AND PAGES ***/
+
+div#post
+{
+	padding: 10px;
+	box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.55);
+	background-color: #212020;
+	opacity: .8;
+}
 
 /* Entry and Page Titles */
 
@@ -301,6 +337,8 @@ h1.page-title
 	clear: both;
 	color: white;
 	opacity: .5;
+	background-color: #212020;
+	opacity: .8;
 }
 
 .entry-utility 
@@ -309,6 +347,8 @@ h1.page-title
 	clear: both;
 	color: white;
 	opacity: .5;
+	background-color: #212020;
+	opacity: .8;
 }
 
 /* Media Alignment */
@@ -324,10 +364,12 @@ h1.page-title
 	padding: 8px 8px 8px 0;
 	float: left;
 }
-/* Entry Content */
+
+
+/******* Entry Content ***********/
 .entry-content
 {
-	/* Style that affects actual entry/post content */
+
 }
 .entry-content a
 {
@@ -363,6 +405,7 @@ h1.page-title
 {
 	/* Style for the navigation links (next/previous post) on a given post */
 }
+/******************** entry content end ***************************/
 
 
 /*** CONTENT : COMMENTS ***/

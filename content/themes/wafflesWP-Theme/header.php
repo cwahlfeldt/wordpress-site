@@ -30,7 +30,6 @@
      
           <!-- **This is my header php stuff** -->
           <div id="headerimg">
-          
   			 		<h1>
    				 		<a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
   			 		</h1>
@@ -56,18 +55,22 @@
               <!-- ////////////////////////////////////////////////////////// -->
             
           </form>
-          </div> 
-          </div>
+        </div> 
+      </div>
+              <div id="access">
+            <!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
+            <?php #wp_page_menu( 'sort_column=menu_order' ); ?>
+            <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+            <p class="botBar"></p>
+          </div> <!--#access-->
+    </div>
           <!--#masthead-->
 
-        </div>
+          
+
         <div id="main">
  
-            <div id="access">
-				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
-				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
-				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-            </div> <!--#access-->
+            
  			
         <!--#masthead-->
     

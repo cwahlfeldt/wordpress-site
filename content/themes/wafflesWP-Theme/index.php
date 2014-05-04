@@ -2,6 +2,7 @@
 <div id="container">
  
     <div id="content">
+    <div id="inner-content">
 		<?php /* Top post navigation */ ?>
 		<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
 
@@ -11,6 +12,7 @@
 		<?php while ( have_posts() ) : the_post() ?>
 
 		<?php /* Create a div with a unique ID thanks to the_ID() and semantic classes with post_class() */ ?>
+					<div id="post">
 		                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php /* an h2 title */ ?>
 		                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -42,6 +44,8 @@
 		                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t\n" ) ?>
 		                    </div><!-- #entry-utility -->
 		                </div><!-- #post-<?php the_ID(); ?> -->
+		              </div><!-- #post -->
+		                <p>&nbsp;</p>
 
 		<?php /* Close up the post div and then end the loop with endwhile */ ?>      
 
@@ -53,6 +57,7 @@
 		                    <?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?> <span style="color: #bbb;">&#8226;</span> <?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?>
 		                </div><!-- #nav-below -->
 		<?php } ?>
+		</div><!-- #inner-content -->
     </div><!-- #content -->
 
 	<?php get_sidebar(); ?>
