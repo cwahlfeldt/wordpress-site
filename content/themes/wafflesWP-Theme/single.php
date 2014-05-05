@@ -45,4 +45,5 @@
         </div><!-- #container -->
  
 <?php get_sidebar(); ?>
+<p>&nbsp;</p>
 <?php get_footer(); ?>

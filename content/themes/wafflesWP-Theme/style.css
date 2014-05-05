@@ -86,15 +86,18 @@ a:visited
 /* Styles that affect the entire layout of the page */
 div#wrapper 
 {
-	width: 820px;
+	width: 910px;
 	margin: 0 auto;
 }
 div#container
 {
+	float: left;
 	background: #9c3c25;
+	display: flex;
 }
 div#content
 {
+
 	padding: 20px 20px 20px 15px;
 
 }
@@ -194,7 +197,7 @@ li
 div#access
 {
 	padding-top: 40px;
-	width: 807px;
+	width: 899px;
 }
 ul#menu-main li
 {
@@ -211,7 +214,7 @@ ul#menu-main li a
 	color: #fff;
 	float: left;
 	margin: 0;
-	padding: 2px 80px 0px 17px;
+	padding: 2px 100px 0px 17px;
 	text-decoration: none;
 	/*clear: both;*/
 }
@@ -295,8 +298,9 @@ div#access p.botBar
 	border-bottom: 20px solid #c0492e;
 	opacity: 1;
 	/*background-color: #c0492e;*/
-	width: 820px;
+	width: 910px;
 	padding: 0px;
+	box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.30);
 }
 
 /**********************************************/ 
@@ -306,8 +310,9 @@ div#access p.botBar
 
 div#post
 {
+	display: block;
 	padding: 10px;
-	box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.55);
+	box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.30);
 	background-color: #212020;
 	opacity: .8;
 }
@@ -334,21 +339,13 @@ h1.page-title
 .entry-meta 
 {
 	font-weight: normal;
-	clear: both;
 	color: white;
-	opacity: .5;
-	background-color: #212020;
-	opacity: .8;
 }
 
 .entry-utility 
 {
 	font-weight: normal;
-	clear: both;
 	color: white;
-	opacity: .5;
-	background-color: #212020;
-	opacity: .8;
 }
 
 /* Media Alignment */
@@ -463,6 +460,16 @@ div#respond h3
 div#primary
 {
 	/* Primary Widget Area DIV */
+	float: right;
+	position: relative;
+	display: inline;
+	clear: both;
+	height: relative;
+	width: 100%;
+	padding: 15px 5px 15px 30px;
+	opacity: .2;
+	list-style: none;
+	text-decoration: none;
 }
 div#secondary
 {
@@ -471,19 +478,44 @@ div#secondary
 .widget-area
 {
 	/* Class that applies to BOTH widget areas */
+	
 }
-.xoxo
+ul.xoxo
 {
 	/* Class that applies to each item in each widget area (an unordered list class) */
+	background-color: white;
+	
 }
 
 
 /*** FOOTER ***/
 div#footer
 {
+	display: block;
+	border-top: 28px solid #2b2a2a;
+	border-bottom: 28px solid #2b2a2a;
+	border-right: 28px solid transparent; 
+	border-left: 28px solid transparent; 
+	font-family: Fixedsys, Tahoma, Lucida console;
+	font-size: 11px;
+	opacity: .4;
+	padding: 5px 0 5px 0;
 	text-align: center;
-	clear: both;
-	background-color: #3DF4BD;
+
+	/*background-color: #2b2a2a;*/
+}
+div#footer a
+{
+	text-decoration: none;
+	color: white;
+	opacity: .7;
+	-webkit-transition-property: a;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+}
+div#footer a:hover
+{
+	color: #f9db12;
 }
 
 /*** YOUR CSS ***/

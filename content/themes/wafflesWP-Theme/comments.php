@@ -96,27 +96,14 @@ foreach ( $comments as $comment )
  
                             <!-- <p id="comment-notes"><?php _e('Your email is <em>never</em> published nor shared.', 'hbd-theme') ?> <?php if ($req) _e('Required fields are marked <span class="required">*</span>', 'hbd-theme') ?></p> -->
  
-              <div id="form-section-author" class="form-section">
-                                <div class="form-label"><label for="author"><?php _e('Name', 'hbd-theme') ?></label><div>
-                                <div class="form-input"><input id="author" name="author" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="20" tabindex="3" /></div>
-              </div><!-- #form-section-author .form-section -->
- 
-              <div id="form-section-email" class="form-section">
-                                <div class="form-label"><label for="email"><?php _e('Email', 'hbd-theme') ?></label></div>
-                                <div class="form-input"><input id="email" name="email" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
-              </div><!-- #form-section-email .form-section -->
- 
-              <div id="form-section-url" class="form-section">
-                                <div class="form-label"><label for="url"><?php _e('Website', 'hbd-theme') ?></label></div>
-                                <div class="form-input"><input id="url" name="url" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
               </div><!-- #form-section-url .form-section -->
  
 <?php endif /* if ( $user_ID ) */ ?>
  
-              <div id="form-section-comment" class="form-section">
+              <!-- <div id="form-section-comment" class="form-section">
                                 <div class="form-label"><label for="comment"><?php _e('Comment', 'hbd-theme') ?></label></div>
-                                <div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div>
-              </div><!-- #form-section-comment .form-section -->
+                                <div class="form-textarea"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="6"></textarea></div> -->
+              </div><!-- #form-section-comment .cform-section -->
  
               <!-- <div id="form-allowed-tags" class="form-section">
                   <p><span><?php _e('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'hbd-theme') ?></span> <code><?php echo allowed_tags(); ?></code></p>

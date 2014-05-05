@@ -19,5 +19,5 @@
             </div><!-- #content -->
 			<?php get_sidebar(); ?>
         </div><!-- #container -->
- 
+ <p>&nbsp;</p>
 <?php get_footer(); ?>
