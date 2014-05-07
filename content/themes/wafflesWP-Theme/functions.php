@@ -18,12 +18,12 @@
 	} // end get_page_number
 
 	// Loads jQuery
-	function load_jQuery() {
-			if (!is_admin()) {
-				wp_enqueue_script('jquery');
-			}
+		if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+		function my_jquery_enqueue() {
+		   wp_deregister_script('jquery');
+		   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-1.11.0.min.js", false, null);
+		   wp_enqueue_script('jquery');
 		}
-		add_action('init', 'load_jQuery');
 	// end of load
 
 	// Custom callback to list comments in the hbd-theme style

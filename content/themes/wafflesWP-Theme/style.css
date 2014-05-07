@@ -25,6 +25,11 @@ h1, h2, h3, h4, h5, h6
 	-webkit-margin-after: 0.0em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+
+	-moz-margin-before: 0em;
+	-moz-margin-after: 0em;
+	-moz-margin-start: 0px;
+	-moz-margin-end: 0px;
 }
 hr
 {
@@ -42,6 +47,12 @@ ul
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	-webkit-padding-start: 0px;
+
+	-moz-margin-before: 0em;
+	-moz-margin-after: 0em;
+	-moz-margin-start: 0px;
+	-moz-margin-end: 0px;
+	-moz-padding-start: 0px;
 }
 pre 
 {
@@ -66,6 +77,11 @@ p
 	-webkit-margin-after: 0em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+
+	-moz-margin-before: 0em;
+	-moz-margin-after: 0em;
+	-moz-margin-start: 0px;
+	-moz-margin-end: 0px;
 }
 a
 {
@@ -86,19 +102,24 @@ a:visited
 /* Styles that affect the entire layout of the page */
 div#wrapper 
 {
-	width: 910px;
+	/*display: block;*/
+	width: 820px;
 	margin: 0 auto;
 }
 div#container
 {
-	float: left;
+	/*float: left;*/
 	background: #9c3c25;
-	display: flex;
+	display: inline-block;
 }
 div#content
 {
-
-	padding: 20px 20px 20px 15px;
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	/*margin-top: 7px;*/
+	padding: 20px 35px 20px 15px;
 
 }
 
@@ -136,6 +157,18 @@ div#headerimg a
 	color: white;
 	opacity: .35; 
 	letter-spacing: 6px;
+
+	-webkit-transition-property: letter-spacing;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+
+  	-moz-transition-property: letter-spacing;
+  	-moz-transition-duration: 0.3s;
+  	-moz-transition-timing-function: ease;
+}
+div#masthead a:hover
+{
+	letter-spacing: 24px;
 }
 div#search img 
 {
@@ -148,10 +181,22 @@ div#masthead input
 	float: left;
 	border: none;
 	font-size: 22px;
-	width: 500px;	
+	width: 493px;	
 	border-bottom: 2px solid #6a6a6a;
 	color:#ffffff;
 	background: transparent;
+
+	-webkit-transition-property: width;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+
+  	-moz-transition-property: width;
+  	-moz-transition-duration: 0.3s;
+  	-moz-transition-timing-function: ease;
+}
+div#masthead input:focus
+{
+	
 }
 div#header input[type=text]
 {
@@ -159,8 +204,9 @@ div#header input[type=text]
 }
 div#header input:focus
 {
-	border-bottom: 2px solid #ef5b39;
+	border-bottom: 2px solid rgba(255, 168, 0, 1);
 	outline: none;
+	width: 782px;
 }
 /*.menu ul
 {
@@ -193,11 +239,15 @@ li
 	-webkit-transition-property: border-bottom;
   	-webkit-transition-duration: 0.3s;
   	-webkit-transition-timing-function: ease;
+
+  	-moz-transition-property: border-bottom;
+  	-moz-transition-duration: 0.3s;
+  	-moz-transition-timing-function: ease;
 }
 div#access
 {
 	padding-top: 40px;
-	width: 899px;
+	width: 804px;
 }
 ul#menu-main li
 {
@@ -214,7 +264,8 @@ ul#menu-main li a
 	color: #fff;
 	float: left;
 	margin: 0;
-	padding: 2px 100px 0px 17px;
+	padding-left: 17px;
+	padding-top: 2px;
 	text-decoration: none;
 	/*clear: both;*/
 }
@@ -291,16 +342,35 @@ li.contact:hover
 	border-bottom: 36px solid #4f4646;
 	border-right: 28px solid transparent;
 }
+li.blog a
+{
+	padding-right: 90px;
+}
+li.about a
+{
+	padding-right: 80px;
+}
+li.art a
+{
+	padding-right: 100px;
+}
+li.code a
+{
+	padding-right: 90px;
+}
+li.contact a
+{
+	padding-right: 40px;
+}
 div#access p.botBar
 {
-	float: left;
+	-webkit-float: left;
 	clear: both;
 	border-bottom: 20px solid #c0492e;
 	opacity: 1;
-	/*background-color: #c0492e;*/
-	width: 910px;
-	padding: 0px;
-	box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.30);
+	width: 820px;
+	/*padding: 0px;*/
+	/*box-shadow: 0px 3px 1px 0px rgba(50, 50, 50, 0.30);*/
 }
 
 /**********************************************/ 
@@ -457,34 +527,105 @@ div#respond h3
 }
 
 /*** CONTENT : SIDEBAR ***/
+
 div#primary
 {
-	/* Primary Widget Area DIV */
-	float: right;
-	position: relative;
-	display: inline;
-	clear: both;
-	height: relative;
-	width: 100%;
-	padding: 15px 5px 15px 30px;
-	opacity: .2;
+	display: inline-block;
+	position:  absolute;
+}
+div#hide-show
+{
+	display: inline-block;
+}
+div#hide-show ul
+{
 	list-style: none;
+	/*float: left;*/
+	clear: both;
+}
+div#hide-show h3
+{
+	font-family: Fixedsys, Tahoma, Lucida console;
+	font-size: 23.5px;
+	border-bottom: 3px rgba(255,255,255,0.4) solid;
+}
+div#hide-show ul li
+{
+	padding-top: 18px;
+}
+div#hide-show ul li a
+{
+	word-wrap: none;
 	text-decoration: none;
+	color: rgba(255,255,255,.6);
+	-webkit-transition-property: div;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+
+}
+div#hide-show ul li a:hover
+{
+	color: rgba(255,255,255,0.1)
 }
 div#secondary
 {
 	/* Secondary Widget Area DIV */
 }
-.widget-area
+div.widget-area
 {
 	/* Class that applies to BOTH widget areas */
-	
 }
 ul.xoxo
 {
-	/* Class that applies to each item in each widget area (an unordered list class) */
-	background-color: white;
-	
+	margin: -24px 0 10px 10px;
+	padding: 0 16px 20px 17px;
+	width: 200px;
+	background-color: rgba(255,255,255,0.06);
+	/*opacity: .2;*/
+}
+div#social-access
+{
+	margin: 20px 0 10px 10px;
+	padding: 15px 16px 30px 17px;
+	width: 200px;
+	background-color: rgba(255,255,255,0.06);
+	/*opacity: .2;*/
+}
+
+div#toggle-button
+{
+	width: 0;
+}
+div#toggle-button a:hover
+{
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	border-top: 17px solid rgba(255, 168, 0, .6);
+}
+div#toggle-button a
+{
+	margin: -56px 0 75px 10px;
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	border-top: 17px solid rgba(255,255,255,0.06);
+	display: block;
+	margin-bottom: 20px;
+	padding: 100%;
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 100%;
+	text-align: left;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	-webkit-transition-property: border;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
 }
 
 
@@ -501,8 +642,6 @@ div#footer
 	opacity: .4;
 	padding: 5px 0 5px 0;
 	text-align: center;
-
-	/*background-color: #2b2a2a;*/
 }
 div#footer a
 {
