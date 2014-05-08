@@ -1,8 +1,10 @@
 <?php get_header(); ?>
- 
+ 	<div id="wrapper">
         <div id="container">
 
             <div id="content">
+
+              <div id="post">
 
 				<?php the_post(); ?>
 
@@ -40,10 +42,9 @@
 				</div><!-- #nav-below -->
             
  				<?php comments_template('', true); ?>
-
+ 			  </div>
+ 			  <?php get_sidebar(); ?>
             </div><!-- #content -->
         </div><!-- #container -->
- 
-<?php get_sidebar(); ?>
-<p>&nbsp;</p>
+ <p></p>
 <?php get_footer(); ?>

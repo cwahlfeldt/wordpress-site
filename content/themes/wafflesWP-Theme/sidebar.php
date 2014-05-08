@@ -6,7 +6,7 @@
                 </div>
          <div id="hide-show">
          <div id="social-access">
-                <p>&nbsp;</p>
+                <p class="FFSucks-fix">&nbsp;</p>
             </div>
             <ul class="xoxo">
               <div id="inner-sidebar">

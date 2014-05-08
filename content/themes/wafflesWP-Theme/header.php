@@ -25,15 +25,15 @@
     <script type="text/javascript">
       window.onload=function() {
         toggle_visibility('hide-show'); // pass the ID
-      };
+      }
 
       function toggle_visibility(id) 
       {
        var e = document.getElementById("hide-show");
-       if(e.style.display == 'inline-block')
-          e.style.display = 'none';
+       if(e.style.opacity == '1')
+          e.style.opacity = '0';
        else
-          e.style.display = 'inline-block';
+          e.style.opacity = '1';
       }
     </script>
 
@@ -70,11 +70,11 @@
                   </script>
                   <!-- ////////////////////////////////////////////////////////// -->
 
-                  <!-- elongates header text  when search bar has focus(NEATO! // -->
+                  <!-- elongates header text  when search bar has focus(NEATO!) // -->
                   <script type="text/javascript">
                   function stretchON() 
                   {
-                      document.getElementById("headerimg").style.letterSpacing = "24px";
+                      document.getElementById("headerimg").style.letterSpacing = "22px";
                   }
                   function stretchOFF() 
                   {
@@ -90,7 +90,7 @@
             <!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
             <?php #wp_page_menu( 'sort_column=menu_order' ); ?>
             <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-            <p class="botBar"></p>
+            <p class="botBar" class="FFSucks-fix"></p>
           </div> <!--#access-->
     </div>
           <!--#masthead-->

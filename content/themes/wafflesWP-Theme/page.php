@@ -2,6 +2,7 @@
  
         <div id="container">
             <div id="content">
+             <div id="post">
  
 <?php the_post(); ?>
  
@@ -15,9 +16,9 @@
                 </div><!-- #post-<?php the_ID(); ?> -->           
  
 <?php if ( get_post_custom_values('comments') ) comments_template() // Add a custom field with Name and Value of "comments" to enable comments on this page ?>            
- 
+                </div>
             </div><!-- #content -->
 			<?php get_sidebar(); ?>
         </div><!-- #container -->
- <p>&nbsp;</p>
+ <p></p>
 <?php get_footer(); ?>

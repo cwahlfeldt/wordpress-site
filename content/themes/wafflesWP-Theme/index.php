@@ -45,7 +45,7 @@
 		                    </div><!-- #entry-utility -->
 		                </div><!-- #post-<?php the_ID(); ?> -->
 		              </div><!-- #post -->
-		                <p>&nbsp;</p>
+		                <p id="post-spacing"></p>
 
 		<?php /* Close up the post div and then end the loop with endwhile */ ?>      
 
