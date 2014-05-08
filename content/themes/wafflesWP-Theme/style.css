@@ -163,10 +163,6 @@ div#headerimg a
   	-moz-transition-duration: 0.3s;
   	-moz-transition-timing-function: ease;
 }
-div#masthead a:focus
-{
-	letter-spacing: 24px;
-}
 div#search img 
 {
 	float: left;
@@ -203,7 +199,7 @@ div#header input:focus
 {
 	border-bottom: 2px solid rgba(255, 168, 0, 1);
 	outline: none;
-	width: 769px;
+	width: 755px;
 }
 /*.menu ul
 {
@@ -245,7 +241,7 @@ li
 div#access
 {
 	padding-top: 40px;
-	width: 807px;
+	width: 804px;
 }
 ul#menu-main li
 {

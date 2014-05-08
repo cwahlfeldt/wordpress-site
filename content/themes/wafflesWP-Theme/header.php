@@ -74,7 +74,7 @@
                   <script type="text/javascript">
                   function stretchON() 
                   {
-                      document.getElementById("headerimg").style.letterSpacing = "25px";
+                      document.getElementById("headerimg").style.letterSpacing = "24px";
                   }
                   function stretchOFF() 
                   {
