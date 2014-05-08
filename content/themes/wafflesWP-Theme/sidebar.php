@@ -5,14 +5,15 @@
                     <a id="hideshow" onclick="toggle_visibility('hide-show')">&nbsp;</a>
                 </div>
          <div id="hide-show">
+         <div id="social-access">
+                <p>&nbsp;</p>
+            </div>
             <ul class="xoxo">
               <div id="inner-sidebar">
                 <?php dynamic_sidebar('primary_widget_area'); ?>
               </div>
             </ul>
-            <div id="social-access">
-                <p>&nbsp;</p>
-            </div>
+            
           </div>
         </div><!-- #primary .widget-area -->
 <?php endif; ?>       

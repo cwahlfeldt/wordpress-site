@@ -24,19 +24,16 @@
 
     <script type="text/javascript">
       window.onload=function() {
-            toggle_visibility('hide-show'); // pass the ID
+        toggle_visibility('hide-show'); // pass the ID
       };
 
-      function toggle_visibility(id) {
+      function toggle_visibility(id) 
+      {
        var e = document.getElementById("hide-show");
        if(e.style.display == 'inline-block')
           e.style.display = 'none';
        else
           e.style.display = 'inline-block';
-      }
-
-      function elongate() {
-        
       }
     </script>
 
@@ -49,15 +46,16 @@
           <!-- **This is my header php stuff** -->
           <div id="headerimg">
   			 		<h1>
-   				 		<a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
+   				 		<a id="headerID" href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a>
   			 		</h1>
   				</div>
 
           <div id="search">
           <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
             <img src="shared/content/uploads/magnifyingGlass.png" />
-              <input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
-              <!-- Press enter to search -->
+              <input onfocus="stretchON()" onblur="stretchOFF()" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
+
+                  <!-- Press enter to search ////////////////////////////////////////-->
                   <script>
                     $(function() {
                         $("form input").keypress(function (e) {
@@ -70,8 +68,21 @@
                         });
                     });
                   </script>
-              <!-- ////////////////////////////////////////////////////////// -->
-            
+                  <!-- ////////////////////////////////////////////////////////// -->
+
+                  <!-- elongates header text  when search bar has focus(NEATO! // -->
+                  <script type="text/javascript">
+                  function stretchON() 
+                  {
+                      document.getElementById("headerimg").style.letterSpacing = "25px";
+                  }
+                  function stretchOFF() 
+                  {
+                      document.getElementById("headerimg").style.letterSpacing = "6px";
+                  }
+              </script>
+              <!-- ////////////////////////////////////////////////////////// -->  
+
           </form>
         </div> 
       </div>
