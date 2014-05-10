@@ -24,7 +24,6 @@
 		   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://code.jquery.com/jquery-1.11.0.min.js", false, null);
 		   wp_enqueue_script('jquery');
 		}
-	// end of load
 
 	// Custom callback to list comments in the hbd-theme style
 	function custom_comments($comment, $args, $depth) {

@@ -1,4 +1,5 @@
 <?php /* The Comments Template — with, er, comments! */ ?>
+<div id="post">
             <div id="comments">
 <?php /* Run some checks for bots and password protected posts */ ?>
 <?php

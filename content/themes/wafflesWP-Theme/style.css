@@ -1,13 +1,15 @@
 /****** Wordpress CSS *****/
 
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
+
+/************* Unifies My font(YAY!!!!!!!!!) ******************/
 @font-face {
-font-family: 'FixedsysExcelsior301Regular';
-src: url('fsex300-webfont.eot');
-src: url('fsex300-webfont.eot?#iefix') format('embedded-opentype'),
-     url('fsex300-webfont.woff') format('woff'),
-     url('fsex300-webfont.ttf') format('truetype'),
-     url('fsex300-webfont.svg#FixedsysExcelsior301Regular') format('svg');
+font-family: FixedsysExcelsior;
+src: url("fsex300-webfont.eot");
+src: url("fsex300-webfont.eot?#iefix') format('embedded-opentype"),
+     url("fsex300-webfont.woff") format('woff'),
+     url("fsex300-webfont.ttf") format('truetype'),
+     url("fsex300-webfont.svg#FixedsysExcelsior301Regular") format('svg');
 font-weight: normal;
 font-style: normal;
 -webkit-font-smoothing:aliased;
@@ -125,7 +127,6 @@ div#container
 	background: #9c3c25;
 	display: inline-block;
 }
-
 div#content
 {
 	position: relative;
@@ -134,7 +135,16 @@ div#content
 	clear: left;
 	margin-left: 10px;
 	/*margin-top: 7px;*/
-	padding: 25px 35px 20px 15px;
+	padding: 25px 35px 10px 15px;
+	width: 745px;
+}
+body.archive div#container
+{
+	padding: 0;
+}
+body.archive div#content
+{
+	padding-bottom: 0;
 }
 div#header p
 {
@@ -162,6 +172,7 @@ div#header p
 div#header h1
 {
 	height: 70px;
+	padding-bottom: 15px;
 }
 div#masthead
 {
@@ -176,8 +187,8 @@ div#headerimg
 div#headerimg a
 {
 	text-decoration: none;
-	font-family: Fixedsys, Tahoma, Geneva;
-	font-size: 55px;
+	font-family: FixedsysExcelsior;
+	font-size: 63px;
 	color: rgba(255,255,255,.6);
 
 	-webkit-transition-property: letter-spacing, color;
@@ -203,7 +214,7 @@ div#masthead input
 	float: left;
 	border: none;
 	font-size: 22px;
-	width: 493px;	
+	width: 508px;	
 	border-bottom: 2px solid #6a6a6a;
 	color:#ffffff;
 	background: transparent;
@@ -228,7 +239,7 @@ div#header input:focus
 {
 	border-bottom: 2px solid rgba(255, 168, 0, 1);
 	outline: none;
-	width: 755px;
+	width: 740px;
 }
 
 
@@ -258,9 +269,9 @@ ul#menu-main li
 ul#menu-main li a
 {
 	display: inline-block;
-	font-family: Fixedsys, Tahoma, Geneva;
-	font-size: 23.5px;
-	color: #fff;
+	font-family: FixedsysExcelsior;
+	font-size: 26px;
+	color: rgba(255,255,255,.8);
 	float: left;
 	padding-left: 17px;
 	padding-top: 2px;
@@ -310,7 +321,6 @@ li.art:hover
 { 
 	border-bottom: 36px solid #2c3d84;
 	border-right: 28px solid transparent;
-	
 }
 li.code
 {
@@ -380,7 +390,7 @@ div#access p.botBar
 div#post
 {
 	display: block;
-	padding: 25px 35px 5px 35px;
+	padding: 25px 35px 0px 35px;
 	box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.30);
 	background-color: rgba(33, 32, 32, .8);
 }
@@ -388,6 +398,8 @@ div#post p
 {
 	color: rgba(255,255,255,.75);
 	padding-left: 20px;
+	padding-bottom: 10px;
+	line-height: 26px;
 }
 p#post-spacing
 {
@@ -402,6 +414,10 @@ div#post a
   	-moz-transition-property: color;
   	-moz-transition-duration: 0.3s;
   	-moz-transition-timing-function: ease;
+}
+div#post div.entry-summary
+{
+	padding-bottom: 10px;
 }
 div#post a:hover
 {
@@ -429,17 +445,28 @@ span.comments-link  a:hover
 {
 	color: rgba(255, 168, 0, .9);
 }
+h1.page-title
+{
+	font-family: FixedsysExcelsior;
+	font-size: 55px;
+	text-align: center;
+	letter-spacing: 10px;
+	/*padding: 10px;*/
+
+}
 h1.entry-title
 {
-	
+	font-family: FixedsysExcelsior;
+	font-size: 32px;
 }
 h2.entry-title
 {
+	padding-top: 5px;
 	line-height: 30px;
 }
 h2.entry-title a
 {
-	font-family: Fixedsys, Tahoma, Geneva;
+	font-family: FixedsysExcelsior;
 	font-size: 32px;
 	text-decoration: none;
 	color: rgba(255,255,255,1);
@@ -448,10 +475,6 @@ div#post h2.entry-title a:hover
 {
 	color: rgba(255, 168, 0, .6);
 	/*opacity: 1;*/
-}
-h1.page-title
-{
-	
 }
 a.post-edit-link
 {
@@ -464,7 +487,7 @@ div#post .entry-meta
 	color: rgba(255,255,255,.2);
 	line-height: 40px;
 	padding-top: 8px;
-	padding-left: 5px;
+	padding-left: 0px;
 	padding-bottom: 10px
 }
 
@@ -490,21 +513,22 @@ div#post .entry-meta
 
 
 /******* Entry Content ***********/
-.entry-content
+div#post .entry-content
 {
-
-}
+	word-wrap: break-word;
+	padding-bottom: 18px;
+}	
 .entry-content a
 {
-	
+	word-wrap: break-word;
 }
 .entry-content a:hover
 {
 	
 }
-.entry-content h1, h2, h3, h4, h5
+div#post .entry-content h1, h2, h3, h4, h5
 {
-	
+	word-wrap: break-word;
 }
 .entry-content ol li
 {
@@ -613,10 +637,10 @@ div#hide-show ul
 }
 div#hide-show h3
 {
-	font-family: Fixedsys, Tahoma, Geneva;
-	font-size: 23.5px;
-	border-bottom: 3px rgba(255,255,255,0.4) solid;
-	color: rgba(255,255,255,.3);
+	font-family: FixedsysExcelsior;
+	font-size: 32px;
+	border-bottom: 2px rgba(255,255,255,0.4) solid;
+	color: rgba(255,255,255,.8);
 }
 div#hide-show ul li
 {
@@ -624,10 +648,12 @@ div#hide-show ul li
 }
 div#hide-show ul li a
 {
-	word-wrap: none;
 	text-decoration: none;
 	color: rgba(255,255,255,.3);
 	padding-left: 5px;
+	font-family: FixedsysExcelsior;
+	font-size: 18px;
+
 	-webkit-transition-property: div;
   	-webkit-transition-duration: 0.3s;
   	-webkit-transition-timing-function: ease;
@@ -658,10 +684,26 @@ ul.xoxo
 div#social-access
 {
 	margin: -25px 0 10px 15px;
-	padding: 15px 12px 30px 12px;
-	width: 200px;
+	/*padding: 15px 12px 30px 12px;*/
+	width: 223.5px;
 	background-color: rgba(255,255,255,0.06);
-	/*opacity: .2;*/
+}
+div#social-access img
+{
+	text-align: center;
+	padding: 15px 0px 10px 16px;
+	
+	-webkit-transition-property: opacity;
+  	-webkit-transition-duration: 0.3s;
+  	-webkit-transition-timing-function: ease;
+
+  	-moz-transition-property: opacity;
+  	-moz-transition-duration: 0.3s;
+  	-moz-transition-timing-function: ease
+}
+div#social-access img:hover
+{
+	opacity: .5;
 }
 
 div#toggle-button
@@ -680,8 +722,8 @@ div#toggle-button a
 	position: relative;
 	text-decoration: none;
 	cursor: pointer;
-	padding: 100%;
 	text-align: left;
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -708,7 +750,7 @@ div#footer
 	border-bottom: 28px solid #2b2a2a;
 	border-right: 28px solid transparent; 
 	border-left: 28px solid transparent; 
-	font-family: Fixedsys, Tahoma, Geneva;
+	font-family: FixedsysExcelsior;
 	font-size: 11px;
 	opacity: .4;
 	padding: 3px 0 3px 0;
@@ -727,5 +769,143 @@ div#footer a:hover
 {
 	color: #f9db12;
 }
+
+.finsishedMsg
+{
+	color: rgba(255,255,255,0.9)
+}
+
+/************************************************************************************/
+
+
+
+
+
+/***** About Template ******/
+body.page-template-about-php div#post .entry-content
+{
+	padding-bottom: 30px;
+}
+body.page-template-about-php div#container 
+{
+	background-color: #562488; 
+}
+
+body.page-template-about-php div#access p.botBar
+{
+	border-bottom: 20px solid #8929f4;
+}
+body.page-template-about-php div#access li.about
+{
+	z-index: 10;
+}
+
+/*************About**************/
+
+
+
+
+
+
+
+/***** Art Template ******/
+body.page-template-art-php div#post .entry-content
+{
+	padding-bottom: 30px;
+}
+body.page-template-art-php div#container 
+{
+	background-color: #2c3d84; 
+}
+body.page-template-art-php div#access p.botBar
+{
+	border-bottom: 20px solid #355ced;
+}
+body.page-template-art-php div#access li.art
+{
+	z-index: 9;
+}
+
+
+
+/**************Art*************/
+
+
+
+
+
+
+
+/***** Code Template ******/
+body.page-template-code-php div#post .entry-content
+{
+	padding-bottom: 30px;
+}
+body.page-template-code-php div#container 
+{
+	background-color: #2a663b; 
+}
+body.page-template-code-php div#access p.botBar
+{
+	border-bottom: 20px solid #2aa04e;
+}
+body.page-template-code-php div#access li.code
+{
+	z-index: 8;
+}
+
+/************Code***************/
+
+
+
+
+
+
+
+/***** Contact Template ******/
+body.page-template-contact-php div#post .entry-content
+{
+	padding-bottom: 30px;
+}
+body.page-template-contact-php div#container 
+{
+	background-color: #4f4646; 
+}
+body.page-template-contact-php div#access p.botBar
+{
+	border-bottom: 20px solid #6c5f5f;
+}
+body.page-template-contact-php div#access li.contact
+{
+	z-index: 7;
+}
+
+
+
+/************Contact***************/
+
+
+
+
+/******************* Collapse o matic style ************************/
+
+div#post .collapseomatic
+{
+	color: rgba(255,255,255,1);
+	opacity: .3;
+	padding-left: 20px;
+	padding-bottom: 15px;
+	line-height: 26px;
+	text-decoration: none;
+}
+div#post .collapseomatic_content
+{
+	color: rgba(255,255,255,.75);
+	padding-left: 20px;
+	padding-bottom: 15px;
+	line-height: 26px;
+}
+
+/******************* Collapse o matic END ************************/
 
 /*** YOUR CSS ***/

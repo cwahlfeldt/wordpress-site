@@ -38,7 +38,7 @@
     </script>
 
 </head>
-<body onload="toggle_visibility('hide-show')">
+<body onload="toggle_visibility('hide-show')" <?php body_class($class); ?>>
 <div id="wrapper" class="hfeed">
     <div id="header">
         <div id="masthead">
@@ -57,7 +57,7 @@
 
                   <!-- Press enter to search ////////////////////////////////////////-->
                   <script>
-                    $(function() {
+                    $('document').ready((function() {
                         $("form input").keypress(function (e) {
                             if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
                                 $('button[type=submit] .default').click();
@@ -80,13 +80,13 @@
                   {
                       document.getElementById("headerimg").style.letterSpacing = "6px";
                   }
-              </script>
-              <!-- ////////////////////////////////////////////////////////// -->  
+                  </script>
+                  <!-- ////////////////////////////////////////////////////////// -->  
 
           </form>
         </div> 
       </div>
-              <div id="access">
+              <div id="access" class="about art code contact">
             <!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
             <?php #wp_page_menu( 'sort_column=menu_order' ); ?>
             <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
@@ -95,13 +95,7 @@
     </div>
           <!--#masthead-->
 
-          
-
         <div id="main">
- 
-            
- 			
-        <!--#masthead-->
     
 
     
