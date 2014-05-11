@@ -13,6 +13,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
  
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/birdDude-favicon.ico" />
  
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
