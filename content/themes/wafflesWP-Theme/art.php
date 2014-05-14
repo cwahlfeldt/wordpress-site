@@ -8,22 +8,29 @@ Template Name: art
         <div id="container">
             <div id="content">
             <div id="inner-content">
-             <div id="post">
- 
-<?php the_post(); ?>
-                
-                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+             
+               <?php
+                if( is_page( 'art' )) {
+                         query_posts( array( 'category_name' => 'art' ) );
+                }
+                ?>
+               <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <div id="post">
+                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                     <div class="entry-content">
-<?php the_content(); ?>
-<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'your-theme' ) . '&after=</div>') ?>
-<?php edit_post_link( __( 'Edit', 'your-theme' ), '<span class="edit-link">', '</span>' ) ?>
+                    <?php the_content(); ?>
+                    <?php edit_post_link( __( 'Edit', 'your-theme' ), '<span class="edit-link">', '</span>' ) ?>
                     </div><!-- .entry-content -->
                 </div><!-- #post-<?php the_ID(); ?> -->           
-<?php if ( get_post_custom_values('comments') ) comments_template() // Add a custom field with Name and Value of "comments" to enable comments on this page ?> 
+                  
 					</div> 
-					<p id="post-spacing"></p>          
+					<p id="post-spacing"></p> 
+                  <?php endwhile; else: ?>
+                  <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+                  <?php endif; ?>
                 </div>
+                  
             </div><!-- #content -->
  
         </div>

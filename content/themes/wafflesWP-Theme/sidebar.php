@@ -7,10 +7,10 @@
          <div id="hide-show">
 
             <div id="social-access">
-                <a href="https://www.facebook.com/cwahlfeldt" target="_blank"><img src="shared/content/uploads/facebook1.png" /></a>
-                <a href="https://plus.google.com/116075397322993264768/about" target="_blank"><img src="shared/content/uploads/google1.png" /></a>
-                <a href="https://www.linkedin.com/profile/view?id=264702256&trk=nav_responsive_tab_profile" target="_blank"><img src="shared/content/uploads/linkedin1.png" /></a>
-                <a href="https://twitter.com/ChrisWahlfeldt" target="_blank"><img src="shared/content/uploads/twitter1.png" /></a>
+                <a href="https://www.facebook.com/cwahlfeldt" target="_blank"><img src="wp-content/uploads/2014/05/facebook.png" /></a>
+                <a href="https://plus.google.com/116075397322993264768/about" target="_blank"><img src="wp-content/uploads/2014/05/google.png" /></a>
+                <a href="https://www.linkedin.com/profile/view?id=264702256&trk=nav_responsive_tab_profile" target="_blank"><img src="wp-content/uploads/2014/05/linkedin.png" /></a>
+                <a href="https://twitter.com/ChrisWahlfeldt" target="_blank"><img src="wp-content/uploads/2014/05/twitter.png" /></a>
             </div>
 
             <ul class="xoxo">

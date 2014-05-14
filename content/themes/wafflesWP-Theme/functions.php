@@ -116,7 +116,7 @@
 
 	    return trim(join( $glue, $tags ));
 	} // end tag_ur_it
-	
+
 	// Register widgetized areas
 	function theme_widgets_init() {
 	    // Area 1

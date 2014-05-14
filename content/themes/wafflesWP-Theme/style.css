@@ -1,3 +1,24 @@
+/******************************************************************
+Theme Name: waffles-theme
+Theme URI: https://github.com/cwahlfeldt
+Description: My first theme.. definetly wont be my last.
+Author: Chris Wahlfeldt
+Author URI: chriswahlfeldt.com
+Version: 1.7
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+Are You Serious? Yes.
+
+******************************************************************/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */
+
+
+
 /****** Wordpress CSS *****/
 
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
@@ -393,13 +414,17 @@ div#post
 	padding: 25px 35px 0px 35px;
 	box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.30);
 	background-color: rgba(33, 32, 32, .8);
+  overflow: auto;
+  padding-bottom: 15px;
 }
 div#post p
 {
+  word-wrap: break-word;
+	padding-bottom: 20px;
 	color: rgba(255,255,255,.75);
 	padding-left: 20px;
-	padding-bottom: 10px;
 	line-height: 26px;
+  float: left;
 }
 p#post-spacing
 {
@@ -466,10 +491,16 @@ h2.entry-title
 }
 h2.entry-title a
 {
-	font-family: FixedsysExcelsior;
-	font-size: 32px;
 	text-decoration: none;
 	color: rgba(255,255,255,1);
+}
+div.entry-content h2
+{
+  font-family: FixedsysExcelsior;
+	font-size: 28px;
+  text-align: left;
+  margin-bottom: 15px;
+  padding-left: 28px;
 }
 div#post h2.entry-title a:hover
 {
@@ -496,28 +527,35 @@ div#post .entry-meta
 	font-weight: normal;
 	color: rgba(255,255,255,.6);
 }
-
+div#post img.border
+{
+  border: 10px solid rgba(33, 32, 32, .8); 
+}
 /* Media Alignment */
-.alignright
+div#post img.alignright
 {
 	/* Style for right-aligned images in posts */
-	padding: 8px 0 8px 8px;
-	float: right;
+  /*padding:32px 20px 6px 10px;*/
+  margin: 30px 20px 0px 10px;
+  float: right;
 }
-.alignleft
+div#post img.alignleft
 {
 	/* Style for left-aligned images in posts */
-	padding: 8px 8px 8px 0;
 	float: left;
+  margin: 30px 20px 0px 10px;
 }
 
+div#post img.aligncenter {
+    display: block;
+    margin: 30px auto 0px;
+}
 
 /******* Entry Content ***********/
 div#post .entry-content
 {
-	word-wrap: break-word;
-	padding-bottom: 18px;
-}	
+ 
+}
 .entry-content a
 {
 	word-wrap: break-word;
@@ -811,7 +849,11 @@ body.page-template-about-php div#access li.about
 /***** Art Template ******/
 body.page-template-art-php div#post .entry-content
 {
-	padding-bottom: 30px;
+	padding-bottom: 0px;
+}
+body.page-template-art-php div#post
+{
+	padding-bottom: 0px;
 }
 body.page-template-art-php div#container 
 {
@@ -853,6 +895,7 @@ body.page-template-code-php div#access li.code
 {
 	z-index: 8;
 }
+
 
 /************Code***************/
 

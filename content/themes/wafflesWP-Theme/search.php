@@ -44,14 +44,18 @@
 				<?php endwhile; ?>          
 
 				<?php else : ?>
-
+              
+											<div id="post">
 				                <div id="post-0" class="post no-results not-found">
 				                    <h2 class="entry-title"><?php _e( 'Nothing Found', 'hbd-theme' ) ?></h2>
 				                    <div class="entry-content">
 				                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'hbd-theme' ); ?></p>
 				    <?php get_search_form(); ?>
-				                    </div><!-- .entry-content -->
+				                    </div><!-- .entry-content -->   
 				                </div>
+                       </div>
+              				</div>
+          
 
 				<?php endif; ?>           
             </div><!-- #content -->

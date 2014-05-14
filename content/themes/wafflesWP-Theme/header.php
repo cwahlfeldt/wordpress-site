@@ -13,7 +13,7 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
  
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/birdDude-favicon.ico" />
+    <link rel="shortcut icon" href="wp-content/uploads/favicon.ico" />
  
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
@@ -53,7 +53,7 @@
 
           <div id="search">
           <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-            <img src="shared/content/uploads/magnifyingGlass.png" />
+            <img src="wp-content/uploads/2014/05/magnifyingGlass.png" />
               <input onfocus="stretchON()" onblur="stretchOFF()" type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" />
 
                   <!-- Press enter to search ////////////////////////////////////////-->
@@ -75,7 +75,7 @@
                   <script type="text/javascript">
                   function stretchON() 
                   {
-                      document.getElementById("headerimg").style.letterSpacing = "22px";
+                      document.getElementById("headerimg").style.letterSpacing = "21px";
                   }
                   function stretchOFF() 
                   {
